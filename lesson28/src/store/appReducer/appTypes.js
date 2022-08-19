@@ -1,0 +1,7 @@
+export const INCREMENT = "INCREMENT"
+export const DECREMENT = "DECREMENT"
+
+export const UPDATE_USER = "UPDATE_USER"
+
+export const GET_REMOTE_POSTS = "GET_REMOTE_POSTS"
+export const GET_REMOTE_POSTS_FAIL = "GET_REMOTE_POSTS_FAIL"
