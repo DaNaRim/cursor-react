@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import {connect} from "react-redux"
 import {Link} from "react-router-dom"
-import {saveWords} from "../../redux/reducers/textParserReduer/textParserActions"
+import {saveWords} from "../../redux/reducers/textReducer/textActions"
 
 class TopPanel extends Component {
   render() {
@@ -14,11 +14,8 @@ class TopPanel extends Component {
   }
 }
 
-
-const mapDispatchToProps = dispatch => {
-  return {
-    saveWords: () => dispatch(saveWords())
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  saveWords: () => dispatch(saveWords())
+})
 
 export default connect(null, mapDispatchToProps)(TopPanel)

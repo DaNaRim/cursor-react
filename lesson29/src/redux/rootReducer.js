@@ -1,10 +1,8 @@
 import {combineReducers} from "redux"
-import {addTextReducer} from "./reducers/addTextReducer/addTextReducer"
-import {textParserReducer} from "./reducers/textParserReduer/textParserReducer"
+import {textReducer} from "./reducers/textReducer/textReducer"
 
 const rootReducer = combineReducers({
-  addTextReducer,
-  textParserReducer
+  textReducer
 })
 
 export default rootReducer

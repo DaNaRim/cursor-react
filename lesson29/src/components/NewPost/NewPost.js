@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 import {connect} from "react-redux"
-import {addText} from "../../redux/reducers/addTextReducer/addTextActions"
-import {exactWordsToCollections} from "../../redux/reducers/textParserReduer/textParserActions"
+import {addText, exactWordsToCollections} from "../../redux/reducers/textReducer/textActions"
 import LeftPanel from "../LeftPanel/LeftPanel"
 import WordsList from "../Posts/WordsList"
 import TopPanel from "../TopPanel/TopPanel"
@@ -28,18 +27,13 @@ class NewPost extends Component {
   }
 }
 
-const getStateToProps = state => {
-  return {
-    words: state.textParserReducer
-  }
-}
+const getStateFromProps = state => ({
+  words: state.textReducer.words
+})
 
-const mapStateToProps = dispatch => {
-  return {
-    addText: e => dispatch(addText(e.target.value)),
-    exactWordsToCollections: () => dispatch(exactWordsToCollections())
-  }
-}
+const mapStateToProps = dispatch => ({
+  addText: e => dispatch(addText(e.target.value)),
+  exactWordsToCollections: () => dispatch(exactWordsToCollections())
+})
 
-export default connect(getStateToProps, mapStateToProps)(NewPost)
-
+export default connect(getStateFromProps, mapStateToProps)(NewPost)
