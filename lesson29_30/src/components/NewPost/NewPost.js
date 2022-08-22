@@ -2,8 +2,8 @@ import React, {Component} from "react"
 import {connect} from "react-redux"
 import {addText, exactWordsToCollections} from "../../redux/reducers/textReducer/textActions"
 import LeftPanel from "../LeftPanel/LeftPanel"
-import WordsList from "../Posts/WordsList"
 import TopPanel from "../TopPanel/TopPanel"
+import WordsList from "./WordsList"
 
 class NewPost extends Component {
   render() {
